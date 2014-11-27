@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>BeerWeb</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>Beer1</servlet-name>
+		<servlet-class>com.xyz.web.BeerSelect1</servlet-class>
+	</servlet>
+		<servlet>
+		<servlet-name>Beer2</servlet-name>
+		<servlet-class>com.xyz.web.BeerSelect2</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Beer3</servlet-name>
+		<servlet-class>com.xyz.web.BeerSelect3</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Beer1</servlet-name>
+		<url-pattern>/SelectBeer.do1</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Beer2</servlet-name>
+		<url-pattern>/SelectBeer.do2</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Beer3</servlet-name>
+		<url-pattern>/SelectBeer.do3</url-pattern>
+	</servlet-mapping>
+</web-app>
