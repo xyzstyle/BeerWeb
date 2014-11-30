@@ -16,7 +16,7 @@
 		<servlet-name>Beer1</servlet-name>
 		<servlet-class>com.xyz.web.BeerSelect1</servlet-class>
 	</servlet>
-		<servlet>
+	<servlet>
 		<servlet-name>Beer2</servlet-name>
 		<servlet-class>com.xyz.web.BeerSelect2</servlet-class>
 	</servlet>
@@ -36,4 +36,23 @@
 		<servlet-name>Beer3</servlet-name>
 		<url-pattern>/SelectBeer.do3</url-pattern>
 	</servlet-mapping>
+	<!-- 利用啤酒各种特性测试Session.Start -->
+	<servlet>
+		<servlet-name>BeerColor</servlet-name>
+		<servlet-class>com.xyz.web.BeerSelectColor</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BeerColor</servlet-name>
+		<url-pattern>/SelectBeerColor.do</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>BeerPrice</servlet-name>
+		<servlet-class>com.xyz.web.BeerSelectPrice</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BeerPrice</servlet-name>
+		<url-pattern>/SelectBeerPrice.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 测试Session.End -->
 </web-app>
