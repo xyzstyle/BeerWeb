@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 
-public class BeerSelectColor extends HttpServlet {
+public class BeerSelectColor1 extends HttpServlet {
 
 	/**
 	 * 
@@ -23,11 +23,11 @@ public class BeerSelectColor extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		String color=req.getParameter("color");
+		BeerBean beerBean=new BeerBean();
+		beerBean.setColor(color);
 		HttpSession session=req.getSession();
-		session.setAttribute("color",color);
-		resp.sendRedirect("session.html");
-		
-		
+		session.setAttribute("beerBean",beerBean);
+		resp.sendRedirect("session1.html");		
 	}
 	
 

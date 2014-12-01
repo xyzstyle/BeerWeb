@@ -2,18 +2,18 @@ package com.xyz.web;
 
 import java.util.*;
 
-public class BeerExpertAll {
+public class BeerExpertAll1 {
 
-	public List<String> getBrands(String color,String price) {
+	public List<String> getBrands(BeerBean beerBean) {
 
 		List<String> brands = new ArrayList<String>();
-		if (color.equals("amber")
-				&& price.equals("medium")) {
+		if (beerBean.getColor().equals("amber")
+				&& beerBean.getPrice().equals("medium")) {
 			brands.add("Jack Amber");
 
 		} else {
-			if (color.equals("amber")
-					&& price.equals("expensive")) {
+			if (beerBean.getColor().equals("amber")
+					&& beerBean.getPrice().equals("expensive")) {
 				brands.add("expensive Red Moose");
 			} else {
 				brands.add("Jail Pale Ale");

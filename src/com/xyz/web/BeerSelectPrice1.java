@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class BeerSelectPrice extends HttpServlet {
+public class BeerSelectPrice1 extends HttpServlet {
 
 	/**
 	 * 
@@ -27,10 +27,11 @@ public class BeerSelectPrice extends HttpServlet {
 			throws ServletException, IOException {
 		String price = req.getParameter("price");
 		HttpSession session = req.getSession();
-		String color = (String) session.getAttribute("color");
-		
-		BeerExpertAll beerExpect = new BeerExpertAll();
-		List<String> result = beerExpect.getBrands(color,price);
+		BeerBean beerBean = (BeerBean) session.getAttribute("beerBean");
+		beerBean.setPrice(price);
+
+		BeerExpertAll1 beerExpect = new BeerExpertAll1();
+		List<String> result = beerExpect.getBrands(beerBean);
 
 		req.setAttribute("styles", result);
 		RequestDispatcher view = req.getRequestDispatcher("result.jsp");

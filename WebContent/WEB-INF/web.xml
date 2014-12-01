@@ -12,31 +12,46 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+	<!-- Beer1.Start -->
+	<!-- 包括index1.html -->
 	<servlet>
 		<servlet-name>Beer1</servlet-name>
 		<servlet-class>com.xyz.web.BeerSelect1</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>Beer2</servlet-name>
-		<servlet-class>com.xyz.web.BeerSelect2</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>Beer3</servlet-name>
-		<servlet-class>com.xyz.web.BeerSelect3</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Beer1</servlet-name>
 		<url-pattern>/SelectBeer.do1</url-pattern>
 	</servlet-mapping>
+	<!-- Beer1.End -->
+
+	<!-- Beer2.Start -->
+	<!-- 包括index2.html BeerExpect.java -->
+	<servlet>
+		<servlet-name>Beer2</servlet-name>
+		<servlet-class>com.xyz.web.BeerSelect2</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>Beer2</servlet-name>
 		<url-pattern>/SelectBeer.do2</url-pattern>
 	</servlet-mapping>
+	<!-- Beer2.End -->
+
+	<!-- Beer3.Start -->
+	<!-- 包括index3.html BeerExpect.java result.jsp -->
+	<servlet>
+		<servlet-name>Beer3</servlet-name>
+		<servlet-class>com.xyz.web.BeerSelect3</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>Beer3</servlet-name>
 		<url-pattern>/SelectBeer.do3</url-pattern>
 	</servlet-mapping>
-	<!-- 利用啤酒各种特性测试Session.Start -->
+	<!-- Beer3.End -->
+
+
+	<!-- Session.Start -->
+	<!-- 利用啤酒各种特性测试,包括indexAll.html,session.html,result.jsp BeerExpectAll.java 
+		BeerBean.java -->
 	<servlet>
 		<servlet-name>BeerColor</servlet-name>
 		<servlet-class>com.xyz.web.BeerSelectColor</servlet-class>
@@ -54,5 +69,29 @@
 		<url-pattern>/SelectBeerPrice.do</url-pattern>
 	</servlet-mapping>
 
-	<!-- 测试Session.End -->
+	<!-- 测试Session1.End -->
+
+
+
+	<!-- Session1.Start -->
+	<!-- 利用啤酒各种特性测试,包括indexAll1.html,session1.html,result.jsp BeerExpectAll1.java 
+		BeerBean.java -->
+	<servlet>
+		<servlet-name>BeerColor1</servlet-name>
+		<servlet-class>com.xyz.web.BeerSelectColor1</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BeerColor1</servlet-name>
+		<url-pattern>/SelectBeerColor.do1</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>BeerPrice1</servlet-name>
+		<servlet-class>com.xyz.web.BeerSelectPrice1</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BeerPrice1</servlet-name>
+		<url-pattern>/SelectBeerPrice.do1</url-pattern>
+	</servlet-mapping>
+
+	<!-- 测试Session1.End -->
 </web-app>
